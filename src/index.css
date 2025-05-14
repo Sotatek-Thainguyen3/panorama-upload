@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@layer base {
+  @media (prefers-color-scheme: dark) {
+    html {
+      color-scheme: dark;
+    }
+  }
+
+  main,
+  header {
+    background-color: var(--background);
+    z-index: 1;
+    position: relative;
+  }
+
+  body {
+    color: var(--color-neutral);
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  h1 {
+    font-size: 50px;
+    line-height: 68px;
+  }
+
+  h2 {
+    font-size: 40px;
+    line-height: 55px;
+  }
+
+  h3 {
+    font-size: 32px;
+    line-height: 44px;
+  }
+
+  h4 {
+    font-size: 24px;
+    line-height: 38px;
+  }
+
+  h5 {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  h6 {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  input.ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
