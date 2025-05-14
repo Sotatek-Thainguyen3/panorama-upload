@@ -30,6 +30,17 @@ function PanoramaView() {
     });
   };
 
+  const yaw = 0.8414429682353795; // rad
+  const distance = 10; // meters
+
+  // 1 độ vĩ độ ≈ 111320m
+  const deltaLng = (distance * Math.sin(yaw)) / 111320; // ≈ 0.0000479
+  const deltaLat = (distance * Math.cos(yaw)) / 111320; // ≈ -0.0000413
+
+  // Vị trí mới:
+  const gpsNode2 = [deltaLng, deltaLat, 3];
+  console.log(gpsNode2);
+
   const handleReady = (instance: Viewer) => {
     const markersPlugs = instance.getPlugin(MarkersPlugin);
     if (!markersPlugs) return;
